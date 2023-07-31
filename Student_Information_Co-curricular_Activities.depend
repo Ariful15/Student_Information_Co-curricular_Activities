@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1689485351 source:c:\project-2.1\student_information_co-curricular_activities\main.c
+	<stdio.h>
+	<conio.h>
+	<string.h>
+	<stdlib.h>
+	<windows.h>
+
+1690367611 source:d:\project-2.1\student_information_co-curricular_activities\main.c
+	<stdio.h>
+	<conio.h>
+	<string.h>
+	<stdlib.h>
+	<windows.h>
+

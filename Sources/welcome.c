@@ -23,14 +23,7 @@ void welcome(void)
 
     printf("\n\n\n\n");
 
-    print_centered("Entering Main Menu in 3 seconds\r", 36, 0);
-    fflush(stdout);
-    usleep(1000000);
-    print_centered("Entering Main Menu in 2 seconds\r", 36, 0);
-    fflush(stdout);
-    usleep(1000000);
-    print_centered("Entering Main Menu in 1 second ", 36, 0);
-    usleep(1000000);
+    print_timer("Entering Main Menu in", 36, 0, 3);
 
     system("cls");
 }

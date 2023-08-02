@@ -35,3 +35,31 @@ void print_blank_border(int n)
         print_centered_bordered("                                                                                         ");
     }
 }
+
+void print_timer(char *text, int padding_left, int padding_right, int timer)
+{
+    while (timer--)
+    {
+        printf("%*s%s %d %s%*s", padding_left, "", text, timer + 1, "seconds\r", padding_right, "");
+        fflush(stdout);
+        if (timer == 0)
+        {
+            break;
+        }
+        usleep(1000000);
+    }
+    printf("%*s%s %d %s%*s", padding_left, "", text, timer + 1, "second ", padding_right, "");
+    fflush(stdout);
+    usleep(1000000);
+}
+/* {
+    print_centered(text, l, r);
+    fflush(stdout);
+    usleep(1000000);
+    print_centered(text, l, r);
+    fflush(stdout);
+    usleep(1000000);
+    print_centered(text, l, r);
+    fflush(stdout);
+    usleep(1000000);
+} */

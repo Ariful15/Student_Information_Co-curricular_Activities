@@ -37,14 +37,7 @@ void main_menu()
         {
         case 1:
         {
-            print_centered("Entering Admin Verification Menu in 3 seconds\r", 29, 0);
-            fflush(stdout);
-            usleep(1000000);
-            print_centered("Entering Admin Verification Menu in 2 seconds\r", 29, 0);
-            fflush(stdout);
-            usleep(1000000);
-            print_centered("Entering Admin Verification Menu in 1 second ", 29, 0);
-            usleep(1000000);
+            print_timer("Entering Admin Verification Menu in", 29, 0, 3);
 
             system("cls");
 
@@ -55,18 +48,13 @@ void main_menu()
 
                 if (log_in_as_admin())
                 {
-                    print_centered("Log in as admin successful!", 29, 0);
+                    printf("\n\n");
+
+                    print_centered("Login as admin successful!", 36, 0);
                     printf("\n\n");
                     usleep(1000000);
 
-                    print_centered("Entering Admin Menu in 3 seconds\r", 29, 0);
-                    fflush(stdout);
-                    usleep(1000000);
-                    print_centered("Entering Admin Menu in 2 seconds\r", 29, 0);
-                    fflush(stdout);
-                    usleep(1000000);
-                    print_centered("Entering Admin Menu in 1 second ", 29, 0);
-                    usleep(1000000);
+                    print_timer("Entering Admin Menu in", 33, 0, 3);
 
                     system("cls");
                     // admin_menu();
@@ -84,14 +72,7 @@ void main_menu()
                         printf("\n\n\n");
                         print_centered("Please try again later\n", 39, 0);
 
-                        print_centered("Going back to Main Menu in 3 seconds\r", 32, 0);
-                        fflush(stdout);
-                        usleep(1000000);
-                        print_centered("Going back to Main Menu in 2 seconds\r", 32, 0);
-                        fflush(stdout);
-                        usleep(1000000);
-                        print_centered("Going back to Main Menu in 1 second ", 32, 0);
-                        usleep(1000000);
+                        print_timer("Going back to Main Menu in", 32, 0, 3);
 
                         system("cls");
 
@@ -109,6 +90,60 @@ void main_menu()
             }
             break;
         }
+        case 2:
+        {
+            print_timer("Entering User Verification Menu in", 29, 0, 3);
+
+            system("cls");
+
+            int count = 0;
+
+            while (1)
+            {
+                if (log_in_as_user())
+                {
+                    printf("\n\n");
+
+                    print_centered("Log in as User successful!", 36, 0);
+                    printf("\n\n");
+                    usleep(1000000);
+
+                    print_timer("Entering User Menu in", 33, 0, 3);
+
+                    system("cls");
+                    // user_menu();
+                    break;
+                }
+                else
+                {
+                    count++;
+                    if (count == 1)
+                    {
+                        system("cls");
+
+                        printf("\n\n\n");
+                        print_centered("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 You have entered the wrong User ID or Full Name 3 times \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\n", 15, 0);
+                        printf("\n\n\n");
+                        print_centered("Please try again later\n", 39, 0);
+
+                        print_timer("Going back to Main Menu in", 32, 0, 3);
+
+                        system("cls");
+
+                        break;
+                    }
+
+                    system("cls");
+
+                    printf("\n\n\n");
+                    print_centered("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 Wrong user ID or full name. Please try again \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2", 21, 20);
+                    usleep(1000000);
+
+                    system("cls");
+                }
+            }
+            break;
+        }
         case 3:
         {
             printf("\nGoodbye!\n");
@@ -118,34 +153,9 @@ void main_menu()
         {
             printf("\nInvalid choice. Please try again.\n");
             usleep(1000000);
+            system("cls");
             break;
         }
-
-            /*
-            case 2:
-                while (1)
-                {
-                    if(log_in_as_user())
-                    {
-                        printf(("\n\n\nLog in as user successfully!"));
-                        usleep(1000000);
-                        system("cls");
-                        printf("\n\t\tWelcome, user!\n");
-                        usleep(1000000);
-                        system("cls");
-                        //user_menu();
-                        break;
-                    }
-                    else
-                    {
-                        printf("\nInvalid user ID or full name. Please try again.\n");
-                        usleep(1000000);
-                        system("cls");
-                    }
-                }
-                break;
-
-            } */
         }
     }
 }

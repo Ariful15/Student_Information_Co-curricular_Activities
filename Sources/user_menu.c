@@ -1,4 +1,5 @@
 #include "../headers/user_menu.h"
+#include "../headers/user_function.h"
 
 void user_menu()
 {
@@ -43,16 +44,16 @@ void user_menu()
         switch (choice)
         {
         case 1:
-            //search_student_by_id();
+            search_student_by_id();
             break;
         case 2:
-            //search_student_by_name();
+            search_student_by_name();
             break;
         case 3:
-            //view_student_information();
+            view_student_information();
             break;
         case 4:
-            //see_batchwise_skills();
+            see_batchwise_skills();
             break;
         case 5:
             print_timer("Returning to the main menu in", 31, 0, 3);

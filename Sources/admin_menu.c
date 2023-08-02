@@ -1,4 +1,5 @@
 #include "../headers/admin_menu.h"
+#include "../headers/admin_function.h"
 
 void admin_menu()
 {
@@ -30,6 +31,7 @@ void admin_menu()
         switch (choice)
         {
         case 1:
+            add_student_information();
             break;
         case 2:
             print_timer("Returning to the main menu in", 31, 0, 3);

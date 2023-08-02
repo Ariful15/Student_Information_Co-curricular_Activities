@@ -113,7 +113,7 @@ void main_menu()
                     print_timer("Entering User Menu in", 33, 0, 3);
 
                     system("cls");
-                    // user_menu();
+                    user_menu();
                     break;
                 }
                 else

@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <unistd.h>
 #include "../headers/custom_print_function.h"
 
 bool log_in_as_admin(void);

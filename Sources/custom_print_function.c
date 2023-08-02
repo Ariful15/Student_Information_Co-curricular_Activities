@@ -52,14 +52,3 @@ void print_timer(char *text, int padding_left, int padding_right, int timer)
     fflush(stdout);
     usleep(1000000);
 }
-/* {
-    print_centered(text, l, r);
-    fflush(stdout);
-    usleep(1000000);
-    print_centered(text, l, r);
-    fflush(stdout);
-    usleep(1000000);
-    print_centered(text, l, r);
-    fflush(stdout);
-    usleep(1000000);
-} */

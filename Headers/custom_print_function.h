@@ -1,0 +1,14 @@
+#ifndef CUSTOM_PRINT_FUNCTION_H
+#define CUSTOM_PRINT_FUNCTION_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void print_B2(int n);
+void print_B2n(int n);
+void print_centered_bordered(char *text);
+void print_centered(char *text, int padding_left, int padding_right);
+
+
+#endif /* CUSTOM_PRINT_FUNCTION_H */

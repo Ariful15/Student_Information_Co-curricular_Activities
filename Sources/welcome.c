@@ -5,50 +5,36 @@ void welcome(void)
     system("cls");
     printf("\n");
 
-    int i = 103;
-    while (i--)
-    {
-        printf("\xB2");
-    }
+    print_B2n(103);
 
-    printf("\n");
-    print_centered("                                                                                         ");
-    print_centered("\\    / _  |  _  _  ._ _   _  ");
-    print_centered(" \\/\\/ (/_ | (_ (_) | | | (/_ ");
-    print_centered("                                                                                         ");
-    print_centered(" .     ");
-    print_centered("-|-.-. ");
-    print_centered(" '-`-' ");
-    print_centered("                                                                                         ");
-    print_centered(" __        __                                                                __            ");
-    print_centered("/   _  __ /      _ _. _   | _  _ /\\  _|_.  .|_  |\\/| _  _  _  _  _ _  _ _ |_(_    _|_ _ _  ");
-    print_centered("\\__(_)    \\__|_|| | |(_|_||(_|| /--\\(_|_|\\/||_\\/|  |(_|| )(_|(_)(-|||(-| )|___)\\/_)|_(-||| ");
-    print_centered("                                              /              _/                /           ");
+    print_centered_bordered("                                                                                         ");
+    print_centered_bordered("\\    / _  |  _  _  ._ _   _  ");
+    print_centered_bordered(" \\/\\/ (/_ | (_ (_) | | | (/_ ");
+    print_centered_bordered("                                                                                         ");
+    print_centered_bordered(" .     ");
+    print_centered_bordered("-|-.-. ");
+    print_centered_bordered(" '-`-' ");
+    print_centered_bordered("                                                                                         ");
+    print_centered_bordered(" __        __                                                                __            ");
+    print_centered_bordered("/   _  __ /      _ _. _   | _  _ /\\  _|_.  .|_  |\\/| _  _  _  _  _ _  _ _ |_(_    _|_ _ _  ");
+    print_centered_bordered("\\__(_)    \\__|_|| | |(_|_||(_|| /--\\(_|_|\\/||_\\/|  |(_|| )(_|(_)(-|||(-| )|___)\\/_)|_(-||| ");
+    print_centered_bordered("                                              /              _/                /           ");
 
-    i = 103;
-    while (i--)
-    {
-        printf("\xB2");
-    }
+    print_B2n(103);
 
     printf("\n");
     printf("\n");
     printf("\n");
     printf("\n");
 
-    printf("                                    Entering Main Menu in 3 seconds\r");
+    print_centered("Entering Main Menu in 3 seconds\r", 36, 0);
     fflush(stdout);
     usleep(1000000);
-    printf("                                    Entering Main Menu in 2 seconds\r");
+    print_centered("Entering Main Menu in 2 seconds\r", 36, 0);
     fflush(stdout);
     usleep(1000000);
-    printf("                                    Entering Main Menu in 1 second ");
+    print_centered("Entering Main Menu in 1 second ", 36, 0);
     usleep(1000000);
+
     system("cls");
-}
-
-void print_centered(char *text)
-{
-    int padding = (100 - strlen(text)) / 2;
-    printf("\xB2\xB2%*s%s%*s\xB2\xB2\n", padding, "", text, padding, "");
 }

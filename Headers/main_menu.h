@@ -1,11 +1,11 @@
-#ifndef WELCOME_H
-#define WELCOME_H
+#ifndef MAIN_MENU_H
+#define MAIN_MENU_H
 
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include "../headers/custom_print_function.h"
 
-void welcome(void);
+void main_menu();
 
-#endif /* WELCOME_H */
+#endif /* MAIN_MENU_H */

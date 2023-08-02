@@ -57,7 +57,9 @@ void main_menu()
                     print_timer("Entering Admin Menu in", 33, 0, 3);
 
                     system("cls");
-                    // admin_menu();
+                    
+                    admin_menu();
+                    
                     break;
                 }
                 else
@@ -72,7 +74,7 @@ void main_menu()
                         printf("\n\n\n");
                         print_centered("Please try again later\n", 39, 0);
 
-                        print_timer("Going back to Main Menu in", 32, 0, 3);
+                        print_timer("Returning to Main Menu in", 32, 0, 3);
 
                         system("cls");
 
@@ -126,7 +128,7 @@ void main_menu()
                         printf("\n\n\n");
                         print_centered("Please try again later\n", 39, 0);
 
-                        print_timer("Going back to Main Menu in", 32, 0, 3);
+                        print_timer("Returning to Main Menu in", 32, 0, 3);
 
                         system("cls");
 

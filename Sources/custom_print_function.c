@@ -27,3 +27,11 @@ void print_centered(char *text, int padding_left, int padding_right)
 {
     printf("%*s%s%*s", padding_left, "", text, padding_right, "");
 }
+
+void print_blank_border(int n)
+{
+    while (n--)
+    {
+        print_centered_bordered("                                                                                         ");
+    }
+}
